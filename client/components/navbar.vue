@@ -1,12 +1,11 @@
 <template>
-  <div class="fixed top-0 z-50 w-full py-7 transition-colors duration-300 ease bg-dark" id="navbar">
-    <div class="container relative">
+  <div class="fixed top-0 z-50 w-full py-7 transition-colors duration-300 ease bg-dark" >
+    <div class="container">
       <div class="flex items-center justify-between md:block">
         <div class="flex items-center justify-between w-full">
-          <BaseProgressBar />
-          <div class="relative z-40">
-            <a href="#">
-              <img src="~/assets/images/logo-light.svg" alt="Logo" class="h-8 md:h-10" />
+          <div class="z-40">
+            <a href="/">
+              <img src="@/assets/images/logo-light.svg" alt="Logo" class="h-8 md:h-14" />
             </a>
           </div>
           <!-- Mobile Toggle Button -->
@@ -14,9 +13,9 @@
             <ButtonMobileToggle />
           </div>
           <!-- Desktop Menu -->
-          <div class="hidden lg:block">
-            <ul class="flex items-center list-none space-x-7">
-              <li
+          <div class="hidden lg:flex space-x-7">
+              <div
+              class="flex items-center "
                 v-for="item in menuItems"
                 :key="item.href"
                 :class="{
@@ -27,52 +26,37 @@
                 <a @click="scrollToSection(item.href)" :href="item.href" class="link hover:cursor-pointer ">
                   {{ item.text }}
                 </a>
-              </li>
-            </ul>
+              </div>
           </div>
         </div>
       </div>
-      <!-- Mobile Menu -->
-      <div
-        :class="{ 'translate-x-0': menuVisible, 'translate-x-full': !menuVisible && isClosing }"
-        class="lg:hidden mobile-menu fixed py-20 top-0 left-0 w-full h-full bg-white dark:bg-dark z-40 transition-transform duration-300 ease-in-out"
-        ref="mobileMenu"
-      >
-        <div class="border-b border-primary-gray1">
-          <a href="/">
-            <!-- Logo for Light and Dark Mode -->
-            <img
-              src="@/assets/images/logo-dark.svg"
-              alt="Logo"
-              class="fixed top-8 left-5 h-8 md:h-10 z-40 block dark:hidden"
-            />
-            <img
-              src="@/assets/images/logo-light.svg"
-              alt="Logo"
-              class="fixed top-8 left-5 h-8 md:h-10 z-40 hidden dark:block"
-            />
-          </a>
-        </div>
-
-        <div class="h-full px-5 overflow-y-auto no-scrollbar">
-          <ul class="flex flex-col w-full h-full">
-            <li
-              v-for="item in menuItems"
-              :key="item.href"
-              class="border-b border-primary-gray1"
-            >
-              <a
-                @click="handleMenuItemClick(item.href)"
-                :href="item.href"
-                class="w-full text-left uppercase text-[1.75em] font-bold flex cursor-pointer my-8"
-                :class="{ 'active-link-mobile': isActive(item.href) }"
-              >
-                {{ item.text }}
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
+    </div>
+
+  <!-- Mobile Menu -->
+  <div :class="{ 'translate-x-0': menuVisible, 'translate-x-full': !menuVisible && isClosing }"
+    class="lg:hidden mobile-menu fixed py-20 top-0 left-0 w-full h-full bg-white dark:bg-dark z-40 transition-transform duration-300 ease-in-out"
+    ref="mobileMenu">
+    <div class="border-b border-primary-gray1">
+      <a href="/">
+        <!-- Logo for Light and Dark Mode -->
+        <img src="@/assets/images/logo-dark.svg" alt="Logo"
+          class="fixed top-8 left-5 h-8 md:h-10 z-40 block dark:hidden" />
+        <img src="@/assets/images/logo-light.svg" alt="Logo"
+          class="fixed top-8 left-5 h-8 md:h-10 z-40 hidden dark:block" />
+      </a>
+    </div>
+
+    <div class="h-full px-5 overflow-y-auto no-scrollbar">
+      <ul class="flex flex-col w-full h-full">
+        <li v-for="item in menuItems" :key="item.href" class="border-b border-primary-gray1">
+          <a @click="handleMenuItemClick(item.href)" :href="item.href"
+            class="w-full text-left uppercase text-[1.75em] font-bold flex cursor-pointer my-8"
+            :class="{ 'active-link-mobile': isActive(item.href) }">
+            {{ item.text }}
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -192,12 +176,13 @@ onUnmounted(() => {
 </script>
 <style scoped>
 .link {
-  @apply text-white text-sm lg:text-[16px] relative justify-center overflow-hidden uppercase tracking-widest hover:text-yellow;
+  @apply text-white text-sm lg:text-[16px]  overflow-hidden tracking-widest hover:text-yellow;
   transition: color 0.3s ease, font-weight 0.5s ease;
 }
 
 .active-link {
-
+  color: #FFC41F !important;
+  -webkit-text-stroke: 0.75px black;
 
 }
 
@@ -225,10 +210,10 @@ onUnmounted(() => {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 body.no-scroll {
-  overflow: hidden !important; 
+  overflow: hidden !important;
 }
 </style>

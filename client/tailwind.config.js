@@ -1,23 +1,40 @@
 export const content = [
   "./components/**/*.{js,vue,ts}",
+  "./layouts/**/*.vue",
   "./pages/**/*.vue",
   "./plugins/**/*.{js,ts}",
   "./nuxt.config.{js,ts}",
   "./app.vue",
+
 ];
-export const darkMode = "class";
 export const theme = {
   fontFamily: {
       sora: ["Sora", "sans-serif"],
   },
   container: {
-      center: true,
-      padding: "1rem",
+    center: true,
+    padding: {
+      DEFAULT: "0.5rem", // Default padding for all screen sizes
+      sm: "2rem",      // Padding for small screens
+      md: "4rem",      // Padding for medium screens
+      lg: "12rem",      // Padding for large screens
+      xl: "18rem",      // Padding for extra-large screens
+    }
   },
   extend: {
       colors: {
           transparent: "transparent",
           current: "currentColor",
+          coral: '#d1475a',
+          purple: '#83005B',
+          raspberry: '#A4123F',
+          yellow: '#FDC84A',
+          nightsky: '#071D49',
+          gray: '#636363',
+          lightgray: '#aeb2b1',
+          lightpink:'#edd9e7',
+          lighterpink:'#f9f2f7',
+  
           purple: "#994FF5",
           yellow: "#FFC41F",
           light: "#F8F7F6",
@@ -36,16 +53,24 @@ export const theme = {
               green2:"#61a93a",
               yellow: "#FFC41F"
             }
+      },   
+      screens: {
+        'usm': '280px',
+        '3xsm': '375px',
+        '2xsm': '400px',
+        'xsm': '500px',
+        'sm': '640px',
+        'md': '768px',
+        '2md': '900px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        '3xl': '1700px',
+        '4xl': '1920px',
+        '5xl': '2560px',
       },
+    },
 
-      backgroundSize: {
-          'auto-25': 'auto 25%',
-          'auto-50': 'auto 50%',
-          'auto-65': 'auto 65%',
-          'auto-75': 'auto 75%',
-          'auto-125': 'auto 125%',
-      },
-  },
   plugins: [
       require('@tailwindcss/forms'),
   ],

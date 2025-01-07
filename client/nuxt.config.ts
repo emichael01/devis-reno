@@ -39,8 +39,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image', "nuxt-marquee"],
 
   css: [
-    "~/assets/css/style.css",
-    "~/assets/css/tailwind.css",
+    "~/assets/css/main.css",
   ],
 
   plugins: [
