@@ -4,9 +4,10 @@
       <div class="w-full flex flex-col items-end md:flex-row md:justify-between ">
         <!-- Text Content -->
         <div class="space-y-6 max-w-[550px] text-center sm:text-left">
-          <h1>Réglez vos problèmes juridiques de chez vous, sans compromis sur la qualité</h1>
-          <p>Vous ne savez pas par où commencer?</p>
-          <BaseButton variant="orange">Cliquez ici</BaseButton>
+          <h1>Obtenez un devis instantané en ligne avec un suivi personnalisé sous 24h.
+          </h1>
+          <p>Prêt à donner vie à votre projet ?</p>
+          <BaseButton variant="orange" to="/calculateur">Cliquez ici</BaseButton>
         </div>
         <!-- Image -->
         <nuxt-img

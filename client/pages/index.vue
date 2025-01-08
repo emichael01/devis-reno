@@ -5,9 +5,7 @@
     <section>
       <PagesHomeHero />
     </section>
-    <section >
-      <Services />
-    </section>
+   
     <!-- <section id="projects">
       <Projects />
     </section>

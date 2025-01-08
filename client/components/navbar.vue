@@ -1,12 +1,15 @@
 <template>
   <div class="fixed top-0 z-50 w-full py-7 transition-colors duration-300 ease" >
-    <div class="container ">
-      <div class="flex items-center justify-between md:block  rounded-full px-8 py-2 bg-white/80 backdrop-blur-sm shadow-md">
+    <div class="container">
+      <div class="flex items-center justify-between md:block rounded-full px-8 py-4 bg-white/80 backdrop-blur-sm shadow-md border-gray/5 border">
         <div class="flex items-center justify-between w-full">
           <div class="z-40">
-            <a href="/">
-              <img src="@/assets/images/logo-light.svg" alt="Logo" class="h-8 md:h-14" />
-            </a>
+            <NuxtLink to="/" class="flex items-end">
+              <img src="/images/logo.png" alt="Logo" class="h-8 md:h-10 mr-2 opacity-60" />
+                <p class="text-3xl text-gray">Reno</p>
+                <p class="text-orange font-bold text-3xl">Direct</p>
+            </NuxtLink>
+              
           </div>
           <!-- Mobile Toggle Button -->
           <div class="flex items-center gap-5 lg:hidden">
@@ -14,20 +17,24 @@
           </div>
           <!-- Desktop Menu -->
           <div class="hidden lg:flex space-x-7">
-              <div
-              class="flex items-center "
-                v-for="item in menuItems"
-                :key="item.href"
-                :class="{
-                  'active-link': isActive(item.href) && item.text !== 'About Me',
-                  '': item.text === 'About Me'
-                }"
-              >
-                <a @click="scrollToSection(item.href)" :href="item.href" class="link hover:cursor-pointer ">
-                  {{ item.text }}
-                </a>
-              </div>
+        <div
+            class="flex items-center"
+            v-for="item in menuItems"
+            :key="item.href"
+            :class="{
+              'active-link': isActive(item.href) && item.text !== 'Calculateur',
+              '': item.text === 'Calculateur'
+            }"
+          >
+            <NuxtLink
+              :to="item.href"
+              class="link hover:cursor-pointer"
+            >
+              {{ item.text }}
+            </NuxtLink>
           </div>
+        </div>
+
         </div>
       </div>
       </div>
@@ -48,132 +55,42 @@
     </div>
 
     <div class="h-full px-5 overflow-y-auto no-scrollbar">
-      <ul class="flex flex-col w-full h-full">
-        <li v-for="item in menuItems" :key="item.href" class="border-b border-primary-gray1">
-          <a @click="handleMenuItemClick(item.href)" :href="item.href"
-            class="w-full text-left uppercase text-[1.75em] font-bold flex cursor-pointer my-8"
-            :class="{ 'active-link-mobile': isActive(item.href) }">
-            {{ item.text }}
-          </a>
-        </li>
-      </ul>
-    </div>
+  <ul class="flex flex-col w-full h-full">
+    <li v-for="item in menuItems" :key="item.href" class="border-b border-primary-gray1">
+      <NuxtLink
+        @click="handleMenuItemClick(item.href)"
+        :to="item.href"
+        class="w-full text-left uppercase text-[1.75em] font-bold flex cursor-pointer my-8"
+        :class="{ 'active-link-mobile': isActive(item.href) }"
+      >
+        {{ item.text }}
+      </NuxtLink>
+    </li>
+  </ul>
+</div>
+
   </div>
 </template>
 
-
-
 <script setup>
-import { ref, provide, onMounted, onUnmounted, watch } from 'vue';
-import gsap from 'gsap';
+import { useRoute } from 'vue-router';
 
-// Define menu items for navigation
+// Define menu items
 const menuItems = [
-  { text: 'About Me', href: '#about' },
-  { text: 'Services', href: '#services' },
-  { text: 'Projects', href: '#projects' },
-  { text: 'Testimonials', href: '#testimonials' }
+  { text: 'Calculateur', href: '/calculateur' },
+  { text: 'Projects', href: '/projects' },
+  { text: 'Blog', href: '/blog' },
+  { text: 'Contact', href: '/contact' }
 ];
 
-// State for mobile menu visibility
-const menuVisible = ref(false);
-const isClosing = ref(false);
-const activeSection = ref('');
-const observer = ref(null);
-const mobileMenu = ref(null);
+// Access current route
+const route = useRoute();
 
-// Provide menu states for ButtonMobileToggle to use
-provide('menuVisible', menuVisible);
-provide('isClosing', isClosing);
-
-// Function to handle smooth scroll to sections
-const scrollToSection = (href) => {
-  const target = document.querySelector(href);
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
-// Watch for changes in menu visibility to enable or disable scrolling
-watch(menuVisible, (visible) => {
-  if (visible) {
-    disableScroll();
-  } else {
-    enableScroll();
-  }
-});
-
-// Function to handle menu item click
-const handleMenuItemClick = (href) => {
-  isClosing.value = true;
-  gsap.to(mobileMenu.value, {
-    x: '-100%',
-    duration: 0.5,
-    ease: 'power2.inOut',
-    onComplete: () => {
-      menuVisible.value = false;
-      isClosing.value = false;
-      resetButtonToHamburger();
-    }
-  });
-  scrollToSection(href);
-};
-
-// Function to check active link
-const isActive = (href) => {
-  return href === `#${activeSection.value}`;
-};
-
-// Function to enable and disable scrolling
-const disableScroll = () => {
-  document.body.classList.add('no-scroll');
-};
-
-const enableScroll = () => {
-  document.body.classList.remove('no-scroll');
-};
-
-// Function to reset the menu button to hamburger state
-const resetButtonToHamburger = () => {
-  gsap.to('.bar-1', { attr: { d: "M1,2 L11,2" }, ease: "power2.inOut" });
-  gsap.to('.bar-2', { autoAlpha: 1, ease: "power2.inOut" });
-  gsap.to('.bar-3', { attr: { d: "M1,8 L11,8" }, ease: "power2.inOut" });
-};
-
-// Intersection observer to track active sections
-const initIntersectionObserver = () => {
-  observer.value = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          activeSection.value = entry.target.id;
-        }
-      });
-    },
-    { threshold: [0.1, 0.5] }
-  );
-
-  menuItems.forEach((item) => {
-    const section = document.querySelector(item.href);
-    if (section) {
-      observer.value.observe(section);
-    }
-  });
-};
-
-// Setup observer on mount
-onMounted(() => {
-  initIntersectionObserver();
-  disableScroll();
-});
-
-// Cleanup observer on unmount
-onUnmounted(() => {
-  if (observer.value) observer.value.disconnect();
-  enableScroll();
-});
-
+// Check if the link is active
+const isActive = (href) => route.path === href;
 </script>
+
+
 <style scoped>
 .link {
   @apply text-dark  overflow-hidden tracking-normal hover:text-orange;
