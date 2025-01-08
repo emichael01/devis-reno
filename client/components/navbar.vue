@@ -1,7 +1,7 @@
 <template>
-  <div class="fixed top-0 z-50 w-full py-7 transition-colors duration-300 ease bg-dark" >
-    <div class="container">
-      <div class="flex items-center justify-between md:block">
+  <div class="fixed top-0 z-50 w-full py-7 transition-colors duration-300 ease" >
+    <div class="container ">
+      <div class="flex items-center justify-between md:block  rounded-full px-8 py-2 bg-white/80 backdrop-blur-sm shadow-md">
         <div class="flex items-center justify-between w-full">
           <div class="z-40">
             <a href="/">
@@ -176,7 +176,7 @@ onUnmounted(() => {
 </script>
 <style scoped>
 .link {
-  @apply text-white text-sm lg:text-[16px]  overflow-hidden tracking-widest hover:text-yellow;
+  @apply text-dark  overflow-hidden tracking-normal hover:text-orange;
   transition: color 0.3s ease, font-weight 0.5s ease;
 }
 

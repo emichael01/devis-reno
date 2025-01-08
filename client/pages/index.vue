@@ -3,12 +3,12 @@
 
     <!-- Main Sections -->
     <section>
-      <About />
+      <PagesHomeHero />
     </section>
-    <!-- <section id="services">
+    <section >
       <Services />
     </section>
-    <section id="projects">
+    <!-- <section id="projects">
       <Projects />
     </section>
     <section id="testimonials">

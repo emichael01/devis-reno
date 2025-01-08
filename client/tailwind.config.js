@@ -18,7 +18,7 @@ export const theme = {
       sm: "2rem",      // Padding for small screens
       md: "4rem",      // Padding for medium screens
       lg: "12rem",      // Padding for large screens
-      xl: "18rem",      // Padding for extra-large screens
+      xl: "17rem",      // Padding for extra-large screens
     }
   },
   extend: {
@@ -34,7 +34,7 @@ export const theme = {
           lightgray: '#aeb2b1',
           lightpink:'#edd9e7',
           lighterpink:'#f9f2f7',
-  
+          orange:'#E9523D',
           purple: "#994FF5",
           yellow: "#FFC41F",
           light: "#F8F7F6",

@@ -56,7 +56,7 @@
     variant: {
       type: String,
       default: 'white',
-      validator: (value) => ['white', 'raspberry', 'purple', 'yellow', 'outlined', 'coral'].includes(value)
+      validator: (value) => ['white', 'raspberry', 'purple', 'yellow', 'outlined', 'coral', 'orange'].includes(value)
     },
     disabled: {
       type: Boolean,
@@ -72,7 +72,7 @@
   
   const buttonClasses = computed(() => [
     'inline-flex items-center justify-center rounded-full px-4 py-3 cursor-pointer',
-    'min-w-[300px]',
+    'min-w-[180px]',
     'text-sm sm:text-sm md:text-base font-bold text-wrap text-center ',
     'transition-all duration-[500ms] ease-in-out',
     'border border-transparent',
@@ -83,7 +83,8 @@
       'bg-purple text-white hover:bg-transparent hover:text-purple hover:border-[1px] hover:border-purple': props.variant === 'purple' && !props.disabled,
       'bg-yellow text-purple hover:bg-transparent hover:text-purple hover:border-[1px] hover:border-purple': props.variant === 'yellow' && !props.disabled,
       'bg-nightsky text-white hover:bg-transparent hover:text-nightsky hover:border-[1px] hover:border-nightsky': props.variant === 'nightsky' && !props.disabled,
-      'bg-transparent text-white border-2 border-white hover:bg-white hover:text-purple': props.variant === 'outlined' && !props.disabled
+      'bg-transparent text-white border-2 border-white hover:bg-white hover:text-purple': props.variant === 'outlined' && !props.disabled,
+      'bg-orange text-white hover:bg-transparent hover:text-orange hover:border-[1px] hover:border-orange': props.variant === 'orange' && !props.disabled,
     },
     props.disabled && 'bg-yellow'
   ])
