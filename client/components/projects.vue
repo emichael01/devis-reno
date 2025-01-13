@@ -6,9 +6,6 @@
     <div class="container">
       <div class="grid grid-cols-1" data-aos="fade-up">
         <div class="text-center">
-          <div class="inline-block mb-6">
-            <BaseTitle text1="Selected" text2=" Projects" :isInverted="true" maxWidth="280px" />
-          </div>
           <h2 class="font-semibold text-[26px]/normal mt-7">Showcasing My Projects</h2>
           <p class="mt-5 text-gray max-w-[708px] mx-auto">Crafting digital, graphic, and dimensional thinking, to create
             category-leading brand experiences that have meaning.</p>

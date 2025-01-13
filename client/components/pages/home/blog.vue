@@ -2,7 +2,7 @@
     <!-- Début Blog -->
     <section >
         <div class="container">
-            <div class="grid grid-cols-1" data-aos="fade-up">
+            <div class="grid grid-cols-1">
                 <div class="text-center">
                     <h2 class="font-semibold text-[26px]/normal mt-7">Découvrez nos conseils et inspirations pour vos
                         rénovations.</h2>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="py-5">
                         <NuxtLink :to="'/blog/cuisine-moderne'"
-                            class="inline-block font-semibold duration-300 text-xl/normal mt-7 hover:text-purple">
+                            class="inline-block font-semibold duration-300 text-xl/normal mt-7 hover:text-orange">
                             10 idées de rénovation pour une cuisine moderne et fonctionnelle
                         </NuxtLink>
                         <div class="flex items-center mt-6 gap-2.5">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="py-5">
                         <NuxtLink :to="'/blog/salle-de-bain'"
-                            class="inline-block font-semibold duration-300 text-xl/normal mt-7 hover:text-purple">
+                            class="inline-block font-semibold duration-300 text-xl/normal mt-7 hover:text-orange">
                             5 tendances incontournables pour rénover votre salle de bain
                         </NuxtLink>
                         <div class="flex items-center mt-6 gap-2.5">
@@ -93,7 +93,7 @@
                     </div>
                     <div class="py-5">
                         <NuxtLink :to="'/blog/sous-sol'"
-                            class="inline-block font-semibold duration-300 text-xl/normal mt-7 hover:text-purple">
+                            class="inline-block font-semibold duration-300 text-xl/normal mt-7 hover:text-orange">
                             Astuces pour transformer votre sous-sol en espace de vie
                         </NuxtLink>
                         <div class="flex items-center mt-6 gap-2.5">

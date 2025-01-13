@@ -5,15 +5,18 @@
     <section>
       <PagesHomeHero />
     </section>
-    <section>
-      <PagesHomeService />
-    </section>
-    <section>
-      <PagesHomeBlog />
-    </section>
-    <section>
-      <PagesHomeTestimonials />
-    </section>
+
+    <div class="space-y-36">
+      <section>
+        <PagesHomeService />
+      </section>
+      <section>
+        <PagesHomeBlog />
+      </section>
+      <section>
+        <PagesHomeTestimonials />
+      </section>
+    </div>
    
     <!-- <section id="projects">
       <Projects />
@@ -25,9 +28,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { ref, onUnmounted } from 'vue';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 // Define reactive properties
 const observer = ref(null);
@@ -51,13 +54,13 @@ const initIntersectionObserver = () => {
 };
 
 // Set up on page load
-onMounted(() => {
-  AOS.init({
-    easing: 'ease-in-out-sine',
-    duration: 2000,
-  });
-  initIntersectionObserver();
-});
+// onMounted(() => {
+//   AOS.init({
+//     easing: 'ease-in-out-sine',
+//     duration: 2000,
+//   });
+//   initIntersectionObserver();
+// });
 
 // Clean up on unmount or when the component is unloaded
 onUnmounted(() => {

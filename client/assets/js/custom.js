@@ -1,13 +1,3 @@
-/*
--------------------------------------------------------------------------
-* Template Name    : EM Design - Tailwind CSS Personal Portfolio Templates   * 
-* Author           : SRBThemes                                          *
-* Version          : 1.0.0                                              *
-* Created          : June 2023                                          *
-* File Description : Main Js file of the template                       *
-*------------------------------------------------------------------------
-*/
-
 var navbar = document.querySelector("nav");
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll(".mobile-nav ul li");
@@ -63,19 +53,3 @@ var swiper = new Swiper(".client-review-slider", {
 
 // VanillaCounter
 VanillaCounter();
-
-// AOS Animation
-AOS.init();
-
-console.log(document.querySelector("#light-darkBtn"))
-document.querySelector("#light-darkBtn").addEventListener("click", function() {
-    var html = document.documentElement.classList;
-
-    if (html.contains('dark')) {
-        html.remove('dark');
-        html.add('light');
-    } else {
-        html.add('dark');
-        html.remove('light'); // Optional: remove 'light' class if it exists
-    }
-});
