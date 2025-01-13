@@ -20,11 +20,11 @@
 
   /* Typography Scale */
   h1 {
-    @apply text-[3rem] sm:text-[4rem] lg:text-[2.5rem] xl:text-[2.75rem] 2xl:text-[3rem] 3xl:text-[2.75rem] font-bold leading-[55px]
+    @apply text-[3rem] sm:text-[4rem] lg:text-[2.5rem] xl:text-[2.75rem] 2xl:text-[3rem] 3xl:text-[2.75rem] font-bold leading-[55px];
   }
 
   h2 {
-    @apply text-[3rem] lg:text-[4rem] leading-none;
+    @apply text-[1.5rem] sm:text-[2rem] lg:text-[2.5rem]  xl:text-[2.75rem] font-bold leading-[33px] xl:leading-[55px];
   }
 
   h3 {
@@ -32,7 +32,7 @@
   }
 
   h4 {
-    @apply text-[1.25rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2.5rem] leading-snug;
+    @apply text-[1.25rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[1.5rem] font-bold  leading-tight;
   }
 
   h5 {
@@ -44,29 +44,20 @@
   }
 
   /* Paragraphs, Lists, and Small Text */
-  p, ul, li {
-    @apply text-[1.25rem] ;
+  p {
+    @apply text-[1.1rem] leading-6;
+  }
+
+  ul, li {
+    @apply text-[0.5rem];
   }
 
   a {
-      @apply text-[1.2rem] ;
+      @apply text-[1rem] ;
   }
 
-  ul {
-    @apply ml-4 list-disc mb-6;
-  }
 
-  li {
-    @apply mb-2 leading-5;
-  }
 
-  li::marker {
-    color: #83005B;
-  }
-
-  li > span {
-    @apply inline-block;
-  }
 
   small {
     @apply text-sm md:text-base;
@@ -88,18 +79,18 @@
 
   ::-webkit-scrollbar-thumb {
     border-radius: 20px;
-    background-color: #ffc41f;
-    border: solid 2px #ffc41f;
+    background-color: #E9523D;
+    border: solid 2px #E9523D;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #ffc41f;
+    background-color: #E9523D;
   }
 
   /* Firefox Scrollbar */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #ffc41f #1f2224;
+    scrollbar-color: #E9523D #1f2224;
   }
 }
 

@@ -78,7 +78,7 @@ import { useRoute } from 'vue-router';
 // Define menu items
 const menuItems = [
   { text: 'Calculateur', href: '/calculateur' },
-  { text: 'Projects', href: '/projects' },
+  { text: 'Projets', href: '/projets' },
   { text: 'Blog', href: '/blog' },
   { text: 'Contact', href: '/contact' }
 ];

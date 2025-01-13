@@ -1,3 +1,4 @@
+
 <template>
   <section class="flex h-[100vh] mt-[45%] sm:mt-auto">
     <div class="container flex items-center space-y-12">
@@ -19,4 +20,6 @@
       </div>
     </div>
   </section>
+  <Testimonial />
+  <Blog />
 </template>

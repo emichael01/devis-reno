@@ -5,6 +5,15 @@
     <section>
       <PagesHomeHero />
     </section>
+    <section>
+      <PagesHomeService />
+    </section>
+    <section>
+      <PagesHomeBlog />
+    </section>
+    <section>
+      <PagesHomeTestimonials />
+    </section>
    
     <!-- <section id="projects">
       <Projects />
