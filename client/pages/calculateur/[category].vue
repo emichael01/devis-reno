@@ -1,6 +1,6 @@
 <template>
-    <div class="container  my-[10%] space-y-12">
-      <h1 class="text-2xl font-bold">Questionnaire pour {{ categoryName }}</h1>
+    <div class="container  my-[45%] md:my-[10%] space-y-12">
+      <h1 class="text-2xl text-center md:text-left font-bold">Questionnaire pour {{ categoryName }}</h1>
     <Questionnaire :category="categorySlug" />
   </div>
 </template>

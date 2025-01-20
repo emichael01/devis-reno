@@ -1,6 +1,6 @@
 <template>
     <!-- Start Services -->
-    <section class="">
+    <section class="bg-purple/5 py-24">
         <div class="container">
                 <div class="flex flex-col items-center text-center">
                     <h2 class="max-w-[708px] leading-tight">Réinventez votre chez-vous avec nos solutions de rénovation</h2>

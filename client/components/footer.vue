@@ -3,7 +3,7 @@
   <div class="container mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Logo and Description -->
-      <div class="space-y-12">
+      <div class="space-y-12 flex flex-col items-center md:items-start">
         <NuxtLink to="/" class="flex items-end">
               <img src="/images/logo.png" alt="Logo" class="h-8 md:h-10 mr-2 opacity-60" />
                 <p class="text-3xl text-white">Reno</p>
@@ -87,24 +87,20 @@
         </a>
       </div>
         <div class="space-y-4">
-            <p>
+            <p class="flex flex-col md:flex-row items-center">
               Courriel : <a href="mailto:contact@renodirect.com" class="hover:text-orange transition">contact@renodirect.com</a>
             </p>
-            <p>
+            <p class="flex flex-col md:flex-row items-center">
               Téléphone : <a href="tel:1234567890" class="hover:text-orange transition">1-800-RENODIR</a>
             </p>
         </div>
       </div>
 
       <!-- Nos Services -->
-      <div class="flex flex-col h-full">
-        <p class="text-lg font-bold">
-
-
-
-            Nos Services</p>
-        <ul class="">
-            <li><a href="#">Devis en ligne</a></li>
+      <div class="flex flex-col items-center md:items-start h-full">
+        <p class="text-lg font-bold mb-4">Nos Services</p>
+        <ul class="flex flex-col items-center md:items-start">
+          <li><a href="#">Devis en ligne</a></li>
             <li><a href="#">Réno Cuisine</a></li>
             <li><a href="#">Réno Salle de Bain</a></li>
             <li><a href="#">Réno Sous-sol</a></li>
@@ -113,10 +109,10 @@
 
 
       <!-- À propos -->
-      <div class="flex flex-col h-full">
-        <p class="text-lg font-bold">
+      <div class="flex flex-col items-center md:items-start h-full">
+        <p class="text-lg font-bold mb-4">
             À propos</p>
-        <ul >
+        <ul class="flex flex-col items-center md:items-start">
           <li><a href="#">Qui sommes-nous ?</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Contactez-nous</a></li>

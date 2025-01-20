@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <BaseProgressBar />
+    <!-- <BaseProgressBar /> -->
     <slot />
     <ButtonScrollToTop />
     <Footer />

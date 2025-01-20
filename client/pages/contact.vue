@@ -1,6 +1,6 @@
 <template>
   <!-- Start Contact Form Section -->
-  <section class="py-16 md:py-36 bg-gray-50 dark:bg-gray-900">
+  <section class="py-16 3xsm:mt-12 2xsm:mt-24 md:mt-36">
     <div class="container">
       <!-- Section Title -->
       <div class="text-center mb-12">
@@ -13,7 +13,7 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 shadow-md rounded-lg p-8">
+      <div class="max-w-3xl mx-auto bg-white  shadow-md rounded-lg py-8">
         <form>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Full Name -->

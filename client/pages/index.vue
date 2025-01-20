@@ -5,7 +5,9 @@
     <section>
       <PagesHomeHero />
     </section>
-
+    <section>
+      <Marquee />
+    </section>
     <div class="space-y-36">
       <section>
         <PagesHomeService />

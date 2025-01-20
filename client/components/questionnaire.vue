@@ -1,7 +1,7 @@
 <template>
-  <div class="flex container mx-auto px-0 py-6 gap-8">
+  <div class="flex flex-col-reverse md:flex-row container mx-auto px-0 py-6 gap-8">
     <!-- Gauche : Progression et Questions Répondues -->
-    <div class="w-1/4 bg-gray-100 p-4 rounded-lg shadow-md">
+    <div class="w-full md:w-1/4 p-4 rounded-lg shadow-md">
       <h2 class="text-lg font-bold">Devis rénovation</h2>
       <!-- Barre de progression -->
       <div class="mb-4">
@@ -30,7 +30,7 @@
     </div>
 
     <!-- Droite : Questionnaire -->
-<div class="w-3/4 bg-white p-6 rounded-lg shadow-md">
+<div class="w-full md:w-3/4 bg-white p-6 rounded-lg shadow-md">
   <div v-if="!isCompleted">
     <h5 class="mb-6">
       {{ currentQuestion.question }}

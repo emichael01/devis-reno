@@ -1,5 +1,5 @@
 <template>
-    <div class="container my-[10%]">
+    <div class="container my-[45%] md:my-[10%]">
       <h1 class="text-center mb-6">Calculateur de Rénovation</h1>
       <p class="text-center mb-8">
         Choisissez une catégorie ci-dessous pour obtenir un devis instantané pour votre projet de rénovation.
