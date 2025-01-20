@@ -14,14 +14,14 @@ const categorySlug = route.params.category;
 // Dynamically set category name based on slug
 const categoryName = computed(() => {
   const mapping = {
-    cuisines: 'Cuisine',
-    salles_de_bain: 'Salles de Bain',
-    toitures: 'Toitures',
-    sous_sols: 'Sous-sols',
-    portes: 'Portes',
-    piscines: 'Piscines',
-    fenetres: 'Fenêtres',
-    chauffe_eau: 'Chauffe-eau'
+    cuisine: 'Cuisine',
+    'salle-de-bain': 'Salle de Bain',
+    toiture: 'Toiture',
+    'sous-sol': 'Sous-sols',
+    porte: 'Porte',
+    patio: 'Patio',
+    fenetre: 'Fenêtre',
+    mur: 'Mur'
   };
   return mapping[categorySlug] || 'Rénovation';
 });
