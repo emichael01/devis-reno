@@ -1,7 +1,6 @@
 <template>
   <!-- Start Contact Form Section -->
-  <section class="py-16 3xsm:mt-12 2xsm:mt-24 md:mt-36">
-    <div class="container">
+  <section class="container my-[45%] md:my-[10%]">
       <!-- Section Title -->
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-200">
@@ -91,14 +90,11 @@
           </div>
         </form>
       </div>
-    </div>
   </section>
   <!-- End Contact Form Section -->
 </template>
 
-<script setup>
-import { ref } from "vue";
-</script>
+
 
 <style scoped>
 .form-input,

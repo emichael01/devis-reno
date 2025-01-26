@@ -14,11 +14,20 @@ export const theme = {
   container: {
     center: true,
     padding: {
-      DEFAULT: "0.5rem", // Default padding for all screen sizes
-      sm: "2rem",      // Padding for small screens
-      md: "4rem",      // Padding for medium screens
-      lg: "12rem",      // Padding for large screens
-      xl: "17rem",      // Padding for extra-large screens
+      DEFAULT: "0.5rem", // 8px (default for all screen sizes)
+      sm: "2rem",       // 32px (small screens, 640px)
+      md: "3rem",       // 64px (medium screens, 768px)
+      lg: "4rem",      // 192px (large screens, 1024px)
+      xl: "10rem",      // 288px (extra-large screens, 1280px)
+      '2xl': "14rem",   // 320px (2x-large screens, 1536px)
+      '3xl': "18rem",   // 384px (3x-large screens, 1700px)
+      '4xl': "30rem",   // 480px (4x-large screens, 1920px)
+      '5xl': "36rem",   // 576px (5x-large screens, 2560px)
+      '6xl': "42rem",   // 672px (6x-large screens, 3072px)
+      '7xl': "48rem",   // 768px (7x-large screens, 3584px)
+      '8xl': "54rem",   // 864px (8x-large screens, 4096px)
+      '9xl': "60rem",   // 960px (9x-large screens, 4608px)
+      '10xl': "66rem",  // 1056px (10x-large screens, 5120px)
     }
   },
   extend: {
@@ -68,6 +77,9 @@ export const theme = {
         '3xl': '1700px',
         '4xl': '1920px',
         '5xl': '2560px',
+        '6xl': '3072px',
+        '7xl': '3584px',
+        '8xl': '4096px',
       },
     },
 

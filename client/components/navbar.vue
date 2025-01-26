@@ -14,7 +14,7 @@
 
           <!-- Mobile Toggle Button -->
           <div class="flex items-center gap-5 lg:hidden">
-            <ButtonMobileToggle />
+            <ButtonMobileToggle ref="buttonMobileToggle" />
           </div>
 
           <!-- Desktop Menu -->
@@ -43,17 +43,10 @@
   <!-- Mobile Menu -->
   <div
     :class="{ 'translate-x-0': menuVisible, 'translate-x-full': !menuVisible && isClosing }"
-    class="lg:hidden mobile-menu fixed py-20 top-0 left-0 w-full h-full bg-white dark:bg-dark z-40 transition-transform duration-300 ease-in-out"
+    class="lg:hidden mobile-menu fixed py-20 top-0 left-0 w-full h-full bg-white  z-40 transition-transform duration-300 ease-in-out"
     ref="mobileMenu"
   >
-    <div class="border-b border-primary-gray1">
-      <NuxtLink to="/">
-        <img src="@/assets/images/logo-dark.svg" alt="Logo" class="fixed top-8 left-5 h-8 md:h-10 z-40 block dark:hidden" />
-        <img src="@/assets/images/logo-light.svg" alt="Logo" class="fixed top-8 left-5 h-8 md:h-10 z-40 hidden dark:block" />
-      </NuxtLink>
-    </div>
-
-    <div class="h-full px-5 overflow-y-auto no-scrollbar">
+    <div class="h-full px-5 py-12 overflow-y-auto no-scrollbar">
       <ul class="flex flex-col w-full h-full">
         <li
           v-for="item in menuItems"
@@ -64,7 +57,7 @@
             :to="item.href"
             @click="handleMenuItemClick(item.href)"
             :class="[
-              'w-full text-left uppercase text-[1.75em] font-bold text-orange flex cursor-pointer my-8',
+              'w-full text-left uppercase text-[2.75em] font-bold text-gray  flex cursor-pointer my-8',
               { 'active-link-mobile': isActive(item.href) }
             ]"
           >
@@ -76,9 +69,10 @@
   </div>
 </template>
 
-
 <script setup>
+import { ref, provide, watch } from 'vue';
 import { useRoute } from 'vue-router';
+import gsap from 'gsap';
 
 // Define menu items
 const menuItems = [
@@ -88,14 +82,58 @@ const menuItems = [
   { text: 'Contact', href: '/contact' }
 ];
 
-// Access current route
+// State for mobile menu visibility
+const menuVisible = ref(false);
+const isClosing = ref(false);
+const mobileMenu = ref(null);
+const buttonMobileToggle = ref(null);
+
+// Provide menu states for ButtonMobileToggle to use
+provide('menuVisible', menuVisible);
+provide('isClosing', isClosing);
+
+// Get the current route
 const route = useRoute();
 
-// Check if the link is active
+// Function to check active link
 const isActive = (href) => {
-  return route.path === href || route.path.startsWith(href);
+  return route.path === href;
 };
 
+// Function to handle menu item click
+const handleMenuItemClick = (href) => {
+  if (buttonMobileToggle.value) {
+    buttonMobileToggle.value.closeMenuAnimation(); // Reset the hamburger icon
+  }
+  isClosing.value = true;
+  gsap.to(mobileMenu.value, {
+    x: '-100%',
+    duration: 0.5,
+    ease: 'power2.inOut',
+    onComplete: () => {
+      menuVisible.value = false;
+      isClosing.value = false;
+    }
+  });
+};
+
+// Function to enable and disable scrolling
+const disableScroll = () => {
+  document.body.classList.add('no-scroll');
+};
+
+const enableScroll = () => {
+  document.body.classList.remove('no-scroll');
+};
+
+// Watch for changes in menu visibility to enable or disable scrolling
+watch(menuVisible, (visible) => {
+  if (visible) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
+});
 </script>
 
 <style scoped>
@@ -135,5 +173,4 @@ const isActive = (href) => {
 body.no-scroll {
   overflow: hidden !important;
 }
-
 </style>

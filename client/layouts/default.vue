@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="min-h-screen flex flex-col">
     <Navbar />
-    <!-- <BaseProgressBar /> -->
-    <slot />
-    <ButtonScrollToTop />
+    <div class="flex-grow">
+      <slot />
+    </div>
     <Footer />
   </div>
 </template>

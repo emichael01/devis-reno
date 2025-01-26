@@ -20,7 +20,7 @@
 
   /* Typography Scale */
   h1 {
-    @apply text-[3rem] sm:text-[4rem] lg:text-[2.5rem] xl:text-[2.75rem] 2xl:text-[3rem] 3xl:text-[2.75rem] font-bold leading-[55px];
+    @apply text-[2.5rem] sm:text-[4rem] lg:text-[2.5rem] xl:text-[2.75rem] 2xl:text-[3rem] 3xl:text-[2.75rem] font-bold leading-[55px];
   }
 
   h2 {
@@ -74,7 +74,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #1f2224;
+    background: #eeeee;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -89,7 +89,6 @@
 
   /* Firefox Scrollbar */
   * {
-    scrollbar-width: thin;
     scrollbar-color: #E9523D #1f2224;
   }
 }

@@ -1,10 +1,10 @@
 
 <template>
-  <section class="flex h-[100vh] md:h-[60vh] 3xsm:mt-[65%] 2xsm:mt-[40%] md:mt-36">
+  <section class="flex h-[100vh] md:h-[60vh] 4xl:h-[40vh] 3xsm:mt-[65%] 2xsm:mt-[15%] md:mt-36">
     <div class="container flex items-center space-y-12">
-      <div class="w-full flex flex-col items-end md:flex-row md:justify-between ">
+      <div class="w-full flex flex-col items-end lg:flex-row lg:justify-between ">
         <!-- Text Content -->
-        <div class="space-y-8 max-w-[550px] text-center sm:text-left">
+        <div class="space-y-8 max-w-[550px] text-center lg:text-left">
           <h1>Obtenez un devis instantané en ligne avec un suivi personnalisé sous 24h.
           </h1>
           <p>Prêt à donner vie à votre projet ?</p>
