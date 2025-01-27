@@ -7,13 +7,8 @@
           <div class="z-40">
             <NuxtLink to="/" class="flex items-end">
               <img src="/images/logo.png" alt="Logo" class="h-8 md:h-10 mr-2 opacity-60" />
-<<<<<<< HEAD
               <p class="text-xl lg:text-3xl text-gray">Reno</p>
               <p class="text-orange font-bold text-xl lg:text-3xl">Direct</p>
-=======
-              <p class="text-3xl text-gray">Reno</p>
-              <p class="text-orange font-bold text-3xl">Direct</p>
->>>>>>> d6cff76e5e5fb7ff5c699f8e74db3b6722937d39
             </NuxtLink>
           </div>
 
