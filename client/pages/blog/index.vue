@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
     <section class="flex py-16  2xsm:mt-24 md:mt-36">
+=======
+    <section class="flex py-16 3xsm:mt-12 2xsm:mt-24 md:mt-36">
+>>>>>>> d6cff76e5e5fb7ff5c699f8e74db3b6722937d39
       <div class="container flex flex-col items-center space-y-12">
             <h1 class="text-4xl font-bold text-center mb-10">Tous les Blogs</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
