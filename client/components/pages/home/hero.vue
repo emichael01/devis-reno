@@ -1,6 +1,6 @@
 
 <template>
-  <section class="flex h-[100vh] md:h-[60vh] 4xl:h-[40vh] mt-[40%] md:mt-36">
+  <section class="flex h-[100vh] md:h-[60vh] 4xl:h-[40vh] mt-36">
     <div class="container flex items-center space-y-12">
       <div class="w-full flex flex-col items-end lg:flex-row lg:justify-between ">
         <!-- Text Content -->
