@@ -1,6 +1,6 @@
 <template>
     <!-- Start Renovation Quote Builder -->
-    <section class="py-16 3xsm:mt-12 2xsm:mt-24 md:mt-36" id="quote-builder">
+    <section class="py-16 5xsm:mt-24 md:mt-36" id="quote-builder">
         <div class="container">
             <div class="grid grid-cols-1" data-aos="fade-up">
                 <div class="text-center">

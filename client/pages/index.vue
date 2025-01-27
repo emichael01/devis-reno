@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <!-- Main Sections -->
     <section>
       <PagesHomeHero />

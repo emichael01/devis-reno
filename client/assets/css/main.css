@@ -28,7 +28,7 @@
   }
 
   h3 {
-    @apply usm:text-[1.5rem] 3xsm:text-[1.75rem] 2xsm:text-[1.85rem] md:text-[2rem] lg:text-[2.5rem] leading-none;
+    @apply 4xsm:text-[1.5rem]  2xsm:text-[1.85rem] md:text-[2rem] lg:text-[2.5rem] leading-none;
   }
 
   h4 {
@@ -99,4 +99,4 @@
     overflow-x: hidden;
     overflow-y: auto;
   }
-}
+};
