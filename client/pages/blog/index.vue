@@ -1,6 +1,6 @@
 <template>
-    <section class="flex py-16 2xsm:mt-24 md:mt-36">
-      <div class="container flex flex-col items-center space-y-12">
+    <section class="container my-[45%] lg:my-[10%]">
+      <div class="flex flex-col items-center space-y-12">
         <h1 class="text-4xl font-bold text-center mb-10">Tous les Blogs</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           <!-- Example blog cards -->
