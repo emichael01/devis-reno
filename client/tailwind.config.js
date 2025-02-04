@@ -45,7 +45,7 @@ export const theme = {
       lg: '4rem', // 64px (large screens, 1024px)
       xl: '10rem', // 160px (extra-large screens, 1280px)
       '2xl': '14rem', // 224px (2x-large screens, 1536px)
-      '3xl': '18rem', // 288px (3x-large screens, 1700px)
+      '3xl': '16rem', // 288px (3x-large screens, 1700px)
       '4xl': '30rem', // 480px (4x-large screens, 1920px)
       '5xl': '36rem', // 576px (5x-large screens, 2560px)
       '6xl': '42rem', // 672px (6x-large screens, 3072px)
@@ -62,19 +62,20 @@ export const theme = {
           coral: '#d1475a',
           purple: '#83005B',
           raspberry: '#A4123F',
-          yellow: '#FDC84A',
+          yellow: '#E7B901',
           nightsky: '#071D49',
           gray: '#636363',
           lightgray: '#aeb2b1',
           lightpink:'#edd9e7',
           lighterpink:'#f9f2f7',
-          orange:'#E9523D',
+          orange:'#e9523d',
           purple: "#994FF5",
           yellow: "#FFC41F",
           light: "#F8F7F6",
           dark: "#050C17",
           gray: "#7780A1",
           white: "#FFFFFF",
+         green:"#718673",
           primary: {
               white: "#FFFFFF",
               gray1: "#D3D3D3",

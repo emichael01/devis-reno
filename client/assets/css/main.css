@@ -20,7 +20,7 @@
 
   /* Typography Scale */
   h1 {
-    @apply text-[2.5rem] sm:text-[4rem] lg:text-[2.5rem] xl:text-[2.75rem] 2xl:text-[3rem] 3xl:text-[2.75rem] font-bold leading-[55px];
+    @apply text-[2rem] sm:text-[2.5rem] lg:text-[2rem] xl:text-[2.75rem] font-bold leading-[40px] lg:leading-[45px] xl:leading-[55px];
   }
 
   h2 {
